@@ -1,0 +1,153 @@
+/*Dette er starten av en reset sheet, jeg kopierte*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+/*Dette er slutten av style sheeten jeg kopierte*/
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr;
+  grid-gap: 10px;
+  grid-template-areas:
+  "header header header"
+  "main main aside"
+  "footer footer footer";
+}
+
+header {
+  grid-area: header;
+	background-image: url("../bilder/digital.jpg");
+	color: white;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+  "header nav";
+}
+
+header h1 {
+  grid-area: header;
+  justify-self: center;
+}
+
+header nav {
+grid-area: nav;
+align-self: center;
+display: flex;
+justify-content: space-around;
+}
+
+header nav a {
+  text-decoration: none;
+	color: white;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+	font-style: oblique;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+	justify-content: flex-start;
+  margin: 10px;
+	align-items: center;
+}
+
+main section {
+	flex-wrap: wrap;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 5px;
+	padding: 10px;
+}
+
+main article p {
+	padding: 10px;
+}
+
+aside {
+  grid-area: aside;
+  display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	border: 1px solid black;
+	border-radius: 10px;
+	align-content: center;
+}
+
+#video {
+  justify-self: center;
+	padding: 10px;
+}
+
+#artikkler {
+justify-self: center;
+padding: 10px;
+}
+
+#artikkler ul {
+	list-style: none;
+}
+
+#artikkler a {
+	text-decoration: none;
+	color: black;
+}
+
+#artikkler a:hover {
+	font-weight: bold;
+}
+
+#googlesearch {
+  justify-self: center;
+	padding: 10px;
+}
+
+.button {
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 2px;
+  background-color: lightgrey;
+}
+
+.button:hover {
+  background-color: grey;
+}
+
+footer {
+  grid-area: footer;
+	padding: 30px;
+  display: flex;
+  justify-content: space-around;
+	background-color: black;
+	color: white;
+}

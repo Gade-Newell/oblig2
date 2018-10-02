@@ -1,0 +1,64 @@
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+
+	body {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 10px;
+		grid-template-areas:
+		"header header header"
+		"main main figure"
+		"footer footer footer"
+	}
+
+	#mainheader {
+	  grid-area: header;
+		background-image: url("../bilder/digital.jpg");
+		color: white;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 15px;
+		margin: 0px 0px 15px 0px;
+	  display: grid;
+	  grid-template-columns: 1fr 2fr;
+	  grid-template-areas:
+	  "header nav";
+	}
+
+	#mainheader h1 {
+	grid-area: header;
+	justify-self: center;
+	}
+
+	#mainheader nav {
+	grid-area: nav;
+	align-self: center;
+	display: flex;
+	justify-content: space-around;
+	}
+
+	#mainheader nav a {
+	  text-decoration: none;
+		color: white;
+	}
+
+	#mainheader nav a:hover {
+	  text-decoration: underline;
+		font-style: oblique;
+	}
+
+	main {
+		grid-area: main;
+	}
+
+	footer {
+	  grid-area: footer;
+		padding: 15px;
+	  display: flex;
+	  justify-content: space-around;
+		background-color: black;
+		color: white;
+	}
